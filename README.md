@@ -22,6 +22,10 @@ $ docker run -d -p 8080:3000 -v "C:\Users\flavio\Desktop\node:/var/www" -w "/var
 $ docker run -d -p 8080:3000 -v "$(pwd):/var/www" -w "/var/www" node npm start
 ```
 
+```sh
+docker exec -it <container_1> ping <container_2>
+```
+
 
 Lista containers:
 ```sh
@@ -83,7 +87,7 @@ $ docker-machine ip
 
 Inspeciona um container:
 ```sh
-$ $ docker inspect <id_container>
+$ docker inspect <id_container>
 ```
 
 
@@ -125,9 +129,39 @@ Lista redes docker:
 $ docker network ls
 ```
 
+Inspeciona uma rede docker:
+```sh
+$ docker network inspect <rede>
+```
+
 
 Criar container em uma rede específica:
 >O nome do container que é utilizado para conexão entre os containers da rede docker, no ping por exemplo.
 ```sh
 $ docker run -it --name meu-ubuntu --network minha-rede ubuntu
+```
+
+
+Realiza o build dos containers de acordo com o arquivo docker-compose:
+```sh
+docker-compose build
+```
+
+
+Sobe todos os serviços criados pelo docker-compose:
+```sh
+docker-compose up
+docker-compose up -d
+```
+
+
+Lista os serviços do docker-compose:
+```sh
+docker-compose ps
+```
+
+
+Derruba os serviços do docker-compose:
+```sh
+docker-compose down
 ```
