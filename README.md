@@ -23,7 +23,7 @@ $ docker run -d -p 8080:3000 -v "$(pwd):/var/www" -w "/var/www" node npm start
 ```
 
 ```sh
-docker exec -it <container_1> ping <container_2>
+$ docker exec -it <container_1> ping <container_2>
 ```
 
 
@@ -144,24 +144,24 @@ $ docker run -it --name meu-ubuntu --network minha-rede ubuntu
 
 Realiza o build dos containers de acordo com o arquivo docker-compose:
 ```sh
-docker-compose build
+$ docker-compose build
 ```
 
 
 Sobe todos os serviços criados pelo docker-compose:
 ```sh
-docker-compose up
-docker-compose up -d
+$ docker-compose up
+$ docker-compose up -d
 ```
 
 
 Lista os serviços do docker-compose:
 ```sh
-docker-compose ps
+$ docker-compose ps
 ```
 
 
 Derruba os serviços do docker-compose:
 ```sh
-docker-compose down
+$ docker-compose down
 ```
