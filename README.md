@@ -94,7 +94,7 @@ $ docker inspect <id_container>
 Criar imagem com Dockerfile:
 >Exemplos de nome de arquivo Dockerfile: Dockerfile, node.dockerfile.
 ```sh
-$ docker build -f Dockerfile -t flavio/node .
+$ docker build -f Dockerfile -t flavio/node:latest .
 ```
 ```sh
 $ docker run -d -p 8080:3000 flavio/node
